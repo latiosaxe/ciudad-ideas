@@ -1,0 +1,112 @@
+
+@color-orange: #b6fa31;
+
+
+.site{
+    header{
+        border-bottom: 4px solid @color-orange;
+        .header_nav{
+            ul{
+                li{
+
+                    &.active{
+                        background: @color-orange;
+                    }
+                    &:hover{
+                        background: @color-orange;
+                    }
+                }
+            }
+            .sub-menu{
+                h4{
+                    color: @color-orange;
+                }
+            }
+        }
+        .header_social{
+            .right{
+                ul{
+                    li{
+                        &.header_search{
+                            background: @color-orange;
+                        }
+                        &:hover{
+                            background: @color-orange;
+                        }
+                    }
+                }
+            }
+        }
+        .search_show{
+            input[type="submit"]{
+                color: @color-orange;
+            }
+            &:hover{
+                background: @color-orange;
+            }
+        }
+    }
+    .carousel{
+        .display{
+            .bullets{
+                li{
+                    &.active{
+                        background: @color-orange;
+                    }
+                }
+            }
+        }
+        .scheduleHome{
+            background: @color-orange;
+        }
+    }
+
+    .content{
+        .container{
+            .recommended{
+                .element{
+                    a{
+                        .bottom{
+                            .label{
+                                background: @color-orange;
+                            }
+                            .title{
+                            }
+                            .subtitle{
+                                color: @color-orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 610px) {
+    .site{
+        header{
+            border-top: 4px solid @color-orange;
+            .menu_mobile{
+                p{
+                    background: @color-orange;
+                }
+            }
+        }
+    }
+    .side_mobile{
+        .content{
+            h2{
+                color: @color-orange;
+            }
+            ul{
+                li{
+                    a{
+                        &.active,&:hover,&:focus{
+                            background: @color-orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

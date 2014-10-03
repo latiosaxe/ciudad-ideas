@@ -1,0 +1,287 @@
+//@import "reset.less";
+//@import "base.less";
+@import "grid.less";
+@import "fonts.less";
+@import "mixins.less";
+//@import "note.less";
+//@import "ventas.less";
+
+@grayTop: #dcdcdc;
+@grayBottom: #cbcbcb;
+@borderBottom: #b4b4b4;
+@borderBottomW: #e6e6e6;
+
+@font-color1: #fff;
+@font-color2: #39424b;
+
+@font-1: 'Arial', sans-serif;
+//@font-2: 'Abril Fatface', cursive;
+
+
+body,html{
+    margin: 0;
+}
+#footer{
+    font-family: @font-1;
+    *{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    ul{
+        padding-left: 0;
+        li{
+            list-style: none;
+        }
+    }
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.footerTop{
+    padding-top: 20px;
+    background-color: @grayTop;
+    .contFootTop{
+        border: solid 1px @grayTop;
+        strong{
+            font-size: 16px;
+        }
+        ul{
+            li{
+                border-bottom: solid 1px @borderBottom;
+//                padding: 5px 0;
+                a{
+                    color: @font-color2;
+                    font-size: 12px;
+                    border-bottom: solid 1px @borderBottomW;
+                    padding: 8px 0 5px;
+                }
+            }
+        }
+        a{
+            color: @font-color2;
+            display: block;
+            i{
+                display: none;
+            }
+        }
+        .noHide{
+            p{
+                font-size: 12px;
+            }
+            a{
+                color: @font-color2;
+                display: block;
+            }
+        }
+    }
+}
+
+.footerBottom{
+    background-color: @grayBottom;
+    .contFootBot{
+        border: solid 1px @grayBottom;
+        .divLogo{
+            margin-top: 20px;
+            border-bottom: solid 1px @borderBottom;
+            padding-bottom: 1px;
+        }
+        .divLogoIn{
+            border-bottom: solid 1px @borderBottomW;
+            padding-bottom: 10px;
+        }
+        .divSocial{
+            margin-top: 20px;
+            padding-top: 2px;
+            strong{
+                font-size: 16px;
+            }
+            ul{
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                li {
+                    float: left;
+//                    width: auto;
+                    display: inline-block;
+                    width: 25%;
+//                    margin-right: 40px;
+                    a{
+                        display: inline-block;
+                    }
+                    div{
+                        border-radius: 50px;
+                        width: 45px;
+                        height: 45px;
+                        text-align: center;
+                        font-size: 30px;
+                        padding-top: 8px;
+                        float: left;
+//                        margin-right: 15px;
+                        i{
+                            color: @font-color1;
+                        }
+                    }
+                    p{
+                        color: @font-color2;
+                        font-size: 16px;
+                        display: inline-block;
+                        margin-left: 5px;
+                    }
+                    .feis{
+                        background-color: #1a4e95;
+                    }
+                    .tuit{
+                        background-color: #35aadc;
+                    }
+                    .gooPlus{
+                        background-color: #dc4a38;
+                    }
+                    .you{
+                        background-color: #ec2828;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+//    .footerBottom{
+//        .contFootBot{
+//            .divSocial{
+//                ul{
+//                    li{
+//                        margin-right: 20px;
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+}
+
+@media (max-width: 990px) {
+
+//    .footerBottom{
+//        .contFootBot{
+//            .divSocial{
+//                ul{
+//                    li{
+//                        &:last-of-type{
+//                            margin-top: 10px;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footerTop{
+        .contFootTop{
+            ul{
+                display: none;
+            }
+            a{
+                i{
+                    display: inline;
+                    float: right;
+                }
+            }
+        }
+        .expand{
+            ul{
+                max-height: 0;
+                overflow: hidden;
+                display: block;
+                .transition(all 500ms);
+                li{
+                    a{
+                        padding: 13px 0 11px;
+                    }
+                }
+                &.expanded{
+                    max-height: 300px;
+                    display: block;
+                    background-color: rgba(220,220,220,0.6);
+                    margin-top: 12px;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
+//    .footerBottom{
+//        .contFootBot{
+//            .divSocial{
+//                ul{
+//                    li{
+//                        margin-right: 50px;
+//                        &:last-of-type{
+//                            margin-top: 0;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+
+}
+
+@media (max-width: 610px) {
+
+    .footerBottom{
+        .contFootBot{
+            .divSocial{
+                ul{
+                    li{
+//                        margin-right: 49px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .footerBottom{
+        .contFootBot{
+            .divSocial{
+                ul{
+                    li{
+                        margin-bottom: 20px;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+}
